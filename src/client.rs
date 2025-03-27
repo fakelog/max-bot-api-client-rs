@@ -3,11 +3,12 @@ use serde::Serialize;
 use std::collections::HashMap;
 use url::Url;
 
+use crate::api::error::ApiError;
 use crate::types::Result;
 use crate::{
     error::MaxBotError,
     models::{
-        ApiError, BotInfo, BotPatch, Chat, ChatList, ChatPatch, GetSubscriptionsResult, Message,
+        BotInfo, BotPatch, Chat, ChatList, ChatPatch, GetSubscriptionsResult, Message,
         NewMessageBody, SendMessageResult, SubscriptionRequestBody, UpdateList,
     },
 };
