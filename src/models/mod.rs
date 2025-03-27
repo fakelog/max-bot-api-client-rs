@@ -1,4 +1,4 @@
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
 // Common models
@@ -271,6 +271,7 @@ pub struct UpdateList {
 
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(tag = "update_type")]
+#[serde(rename_all = "snake_case")]
 pub enum Update {
     MessageCreated(MessageCreatedUpdate),
     MessageCallback(MessageCallbackUpdate),
