@@ -12,6 +12,7 @@ pub use attachment::*;
 pub use bot::*;
 pub use buttons::*;
 pub use chat::*;
+pub use error::*;
 pub use keyboard::*;
 pub use message::*;
 pub use update::*;

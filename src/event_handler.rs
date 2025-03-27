@@ -1,6 +1,6 @@
 use tokio::sync::mpsc;
 
-use crate::{client::MaxBotClient, models::Update, types::Result};
+use crate::{api::types::Result, client::MaxBotClient, models::Update};
 
 pub struct EventHandler {
     client: MaxBotClient,

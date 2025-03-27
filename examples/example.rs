@@ -1,8 +1,8 @@
 use dotenvy::dotenv;
 use std::env;
 
+use max_bot_api_client_rs::api::types::Result;
 use max_bot_api_client_rs::models::Update;
-use max_bot_api_client_rs::types::Result;
 use max_bot_api_client_rs::{client::MaxBotClient, event_handler::EventHandler};
 
 async fn handle_update(update: Update) -> Result<()> {
