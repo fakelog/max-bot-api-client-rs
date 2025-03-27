@@ -15,10 +15,7 @@ pub struct MaxBotClient {
 
 impl MaxBotClient {
     pub fn new(access_token: String) -> Self {
-        let base_url = Url::parse("https://botapi.max.ru").unwrap();
-        let api_client = ApiClient::new(access_token.clone(), base_url.clone());
-
-        Self { api_client }
+        Self::with_base_url(access_token, "https://botapi.max.ru").unwrap()
     }
 
     pub fn with_base_url(
