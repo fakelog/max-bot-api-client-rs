@@ -3,7 +3,7 @@ use crate::{
         self,
         models::{Message, MessageLinkType, NewMessageBody, NewMessageLink, SendMessageResult},
     },
-    client::{self, MaxBotClient},
+    client::MaxBotClient,
 };
 
 type Result = api::types::Result<SendMessageResult>;
