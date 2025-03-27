@@ -2,10 +2,10 @@ use std::collections::HashMap;
 
 use reqwest::Method;
 
-use crate::{
-    api::ApiClient,
-    api::types::Result,
+use crate::api::{
+    ApiClient,
     models::{GetSubscriptionsResult, SubscriptionRequestBody},
+    types::Result,
 };
 
 impl ApiClient {

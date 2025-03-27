@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 use reqwest::Method;
 
-use crate::{api::ApiClient, api::types::Result, models::UpdateList};
+use crate::api::{ApiClient, models::UpdateList, types::Result};
 
 impl ApiClient {
     pub async fn get_updates(

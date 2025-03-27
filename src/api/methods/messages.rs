@@ -2,11 +2,10 @@ use std::collections::HashMap;
 
 use reqwest::Method;
 
-use crate::{
-    api::ApiClient,
-    api::types::Result,
-    models::Message,
-    models::{NewMessageBody, SendMessageResult},
+use crate::api::{
+    ApiClient,
+    models::{Message, NewMessageBody, SendMessageResult},
+    types::Result,
 };
 
 impl ApiClient {

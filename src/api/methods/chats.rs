@@ -2,9 +2,11 @@ use std::collections::HashMap;
 
 use reqwest::Method;
 
-use crate::api::ApiClient;
-use crate::api::types::Result;
-use crate::models::{Chat, ChatList, ChatPatch};
+use crate::api::{
+    ApiClient,
+    models::{Chat, ChatList, ChatPatch},
+    types::Result,
+};
 
 impl ApiClient {
     pub async fn get_chats(&self, count: Option<i32>, marker: Option<i64>) -> Result<ChatList> {

@@ -3,7 +3,7 @@ use serde::Serialize;
 use std::collections::HashMap;
 
 use super::error::ApiClientError;
-use crate::{api::types::Result, models::ApiError};
+use crate::{api::models::ApiError, api::types::Result};
 
 #[derive(Debug, Clone)]
 pub struct ApiClient {

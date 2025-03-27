@@ -1,16 +1,16 @@
 use url::Url;
 
 use crate::api::ApiClient;
-use crate::api::types::Result;
-use crate::error::MaxBotError;
-use crate::models::{
+use crate::api::models::{
     BotInfo, BotPatch, Chat, ChatList, ChatPatch, GetSubscriptionsResult, Message, NewMessageBody,
     SendMessageResult, SubscriptionRequestBody, UpdateList,
 };
+use crate::api::types::Result;
+use crate::error::MaxBotError;
 
 #[derive(Debug, Clone)]
 pub struct MaxBotClient {
-    api_client: ApiClient,
+    pub api_client: ApiClient,
 }
 
 impl MaxBotClient {
@@ -61,13 +61,12 @@ impl MaxBotClient {
     // Message methods
     pub async fn send_message(
         &self,
-        message: &NewMessageBody,
         chat_id: Option<i64>,
-        user_id: Option<i64>,
+        text: impl Into<String>,
     ) -> Result<SendMessageResult> {
-        self.api_client
-            .send_message(message, chat_id, user_id)
-            .await
+        let message = NewMessageBody::new(text.into());
+
+        self.api_client.send_message(&message, chat_id, None).await
     }
 
     pub async fn get_message(&self, message_id: &str) -> Result<Message> {

@@ -3,7 +3,7 @@ use thiserror::Error;
 use tokio::sync::mpsc::error::SendError;
 use url::ParseError;
 
-use crate::models::Update;
+use crate::api::models::Update;
 
 #[derive(Debug, Error)]
 pub enum ApiClientError {

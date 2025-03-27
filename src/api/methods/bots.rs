@@ -1,6 +1,6 @@
 use crate::api::ApiClient;
+use crate::api::models::{BotInfo, BotPatch};
 use crate::api::types::Result;
-use crate::models::{BotInfo, BotPatch};
 
 impl ApiClient {
     pub async fn get_my_info(&self) -> Result<BotInfo> {
